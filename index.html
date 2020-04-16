@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="stylesheet.css">
+  <link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/ac736d8bde.js" crossorigin="anonymous"></script>
+  <title>FIFA 20 Randomiser</title>
+</head>
+
+<body>
+  <img id="logo" src="https://www.fifplay.com/img/public/fifa-20-logo-white.png" alt="FIFA 20 Logo">
+  <div id="container">
+    <form>
+      <h2>Enter Names:</h2>
+      <input type="text" id="names" placeholder="Separate names with commas" required>
+      <div id="ratings">
+        <h2>Select Ratings: </h2>
+        <div class="checkbox-pair">
+          <input type="checkbox" name="rating" id="all" value="all" onClick="uncheckOthers()" checked>
+          <label for="all">All</label>
+        </div>
+
+        <div class="checkbox-pair">
+          <input type="checkbox" name="rating" id="5-star" value="5" class="notAll" onClick="uncheckAll()">
+          <label for="5-star">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+              class="fas fa-star"></i><i class="fas fa-star"></i>
+          </label>
+        </div>
+
+        <div class="checkbox-pair">
+          <input type="checkbox" name="rating" id="4half-star" value="4.5" class="notAll" onClick="uncheckAll()">
+          <label for="4half-star"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+              class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+          </label>
+        </div>
+
+        <div class="checkbox-pair">
+          <input type="checkbox" name="rating" id="4-star" value="4" class="notAll" onClick="uncheckAll()">
+          <label for="4-star">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+              class="fas fa-star"></i><i class="far fa-star"></i>
+          </label>
+        </div>
+        <!-- <div class="checkbox-pair">
+          <input type="checkbox" name="rating" id="3half-star" value="3.5" class="notAll" onClick="uncheckAll()">
+          <label for="3half-star">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+            <i class="far fa-star"></i>
+          </label>
+        </div>
+        <div class="checkbox-pair">
+          <input type="checkbox" name="rating" id="3-star" value="3" class="notAll" onClick="uncheckAll()">
+          <label for="3-star">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+          </label>
+        </div>
+        <div class="checkbox-pair">
+          <input type="checkbox" name="rating" id="2half-star" value="2.5" class="notAll" onClick="uncheckAll()">
+          <label for="2half-star">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+          </label>
+        </div>
+        <div class="checkbox-pair">
+          <input type="checkbox" name="rating" id="2-star" value="2" class="notAll" onClick="uncheckAll()">
+          <label for="2-star">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+          </label>
+        </div>
+        <div class="checkbox-pair">
+          <input type="checkbox" name="rating" id="1half-star" value="1.5" class="notAll" onClick="uncheckAll()">
+          <label for="1half-star">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+          </label>
+        </div>
+        <div class="checkbox-pair">
+          <input type="checkbox" name="rating" id="1-star" value="1" class="notAll" onClick="uncheckAll()">
+          <label for="1-star">
+            <i class="fas fa-star"></i>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+          </label>
+        </div>
+        <div class="checkbox-pair">
+          <input type="checkbox" name="rating" id="half-star" value="0.5" class="notAll" onClick="uncheckAll()">
+          <label for="half-star">
+            <i class="fas fa-star-half-alt"></i>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+          </label>
+        </div> -->
+      </div>
+
+      <div id="international">
+        <h2>Include International Teams?</h2>
+        <div class="checkbox-pair">
+          <input type="radio" id="internationalYes" name="international" value="yes">
+          <label for="internationalYes">Yes</label>
+        </div>
+
+        <div class="checkbox-pair">
+          <input type="radio" id="internationalNo" name="international" value="no" checked>
+          <label for="internationalNo">No</label>
+        </div>
+
+        <div class="checkbox-pair">
+          <input type="radio" id="internationalOnly" name="international" value="only">
+          <label for="internationalOnly">Only International Teams</label>
+        </div>
+      </div>
+    </form>
+    <input type="submit" id="submit" value="Randomise">
+  </div>
+
+  <div id="myModal" class="modal fade-in">
+    <!-- Modal content -->
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <table id="results">
+      </table>
+      <h2>Enjoy your game!</h2>
+    </div>
+  </div>
+
+  <script src="teams.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
