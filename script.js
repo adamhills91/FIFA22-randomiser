@@ -7,7 +7,7 @@ submit.addEventListener("click", function () {
   selectedTeams = [];
   let ratings = [];
   // reset selected teams and ratings every time submit is clicked
-  let players = document.getElementById("names").value.split(", ");
+  let players = document.getElementById("names").value.split(",");
   // separate names into array
   const ratingSelection = document.querySelectorAll("input[type='checkbox']:checked");
   const internationalSelection = document.querySelector("input[type='radio']:checked").value;
