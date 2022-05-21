@@ -23,7 +23,7 @@ body {
   width: 70%;
   max-width: 700px;
   margin: 0 auto 40px;
-  background-color: #fa5361;
+  background-color: #c5f851;
   border-radius: 10px;
   padding: 30px;
 }
@@ -40,7 +40,7 @@ form {
 
 h2 {
   font-size: 18px;
-  color: white;
+  color: #1a2134;
 }
 
 #names {
@@ -58,7 +58,7 @@ h2 {
 }
 
 label {
-  color: white;
+  color: #1a2134;
   font-weight: bold;
 }
 
@@ -86,7 +86,8 @@ input[type=checkbox], input[type=radio] {
   font-size: 16px;
   margin: 40px auto 20px;
   padding: 15px 20px;
-  background-color: white;
+  background-color: #1a2134;
+  color: white;
   border: none;
   border-radius: 5px;
   width: 50%;
@@ -96,7 +97,8 @@ input[type=checkbox], input[type=radio] {
 
 #submit:hover {
   cursor: pointer;
-  background-color: #fcdc50;
+  background-color: white;
+  color: #1a2134;
 }
 
 /* Code from W3 */
@@ -148,7 +150,7 @@ input[type=checkbox], input[type=radio] {
 }
 
 .close:hover, .close:focus {
-  color: #fa5361;
+  color: #c5f851;
   text-decoration: none;
   cursor: pointer;
 }
