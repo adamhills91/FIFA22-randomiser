@@ -1,7 +1,7 @@
 :root {}
 
 body {
-  background-image: url(https://media.contentapi.ea.com/content/dam/ea/fifa/fifa-20/global-assets/common/featuredimage.png.adapt.crop191x100.1200w.png);
+  background-image: url("fifa22-background.jpeg");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
